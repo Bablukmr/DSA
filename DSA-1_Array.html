@@ -1,0 +1,41 @@
+ Q.1st
+    
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+let data = [4, 14, 8, 24, 8, 3, 4];
+// let divs = document.getElementById("divs");
+// for (let i = 0; i < data.length; i++) {
+//    document.write(`${data[i]}<br/>`)
+// }
+// document.write(`${data[3]}<br/>`)
+
+function handleElement(){
+    // console.log(inpput)
+    //    document.write(`${data[values]}`)
+    let values=document.getElementById('element').value
+    if(data.length>values){
+        alert(data[values])
+   console.log(data[values])
+  
+    }
+    else{
+        alert('plese inter valid input')
+    }
+   
+}
+</script>
+
+</head>
+<body>
+    <input type="number"  id="element"/>
+    <button onclick="handleElement()">Get Element</button>
+   
+</body>
+</html> 
+

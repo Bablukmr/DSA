@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let data=[50,65,44,22,48,52]
+      // let newEl=60;
+      // let position=4;
+      // for(let i=data.length-1;i>=0;i--){
+      //     console.warn(data[i])
+      //     if(i>=position){
+      //         data[i+1]=data[i]
+      //         if(i==position){
+      //             data[i]=newEl
+      //         }
+
+      //     }
+      // }
+      // console.warn(data)
+      function handleElement() {
+        let data = [50, 65, 44, 22, 48, 52];
+        let newEl = document.getElementById("newEl").value;
+        newEl=parseInt(newEl)
+        let position = document.getElementById("position").value;
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newEl;
+            }
+          }
+        }
+        // data.splice(newEl,0,newEl)
+        console.log(data);
+    }
+    </script>
+  </head>
+  <body>
+    <input placeholder="inter nwe Element" id="newEl" /><br/>
+    <input placeholder="inter nwe Position" id="position" /><br/>
+    <button onclick="handleElement()">Get New Arr</button>
+  </body>
+</html>

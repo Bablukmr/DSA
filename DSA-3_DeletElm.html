@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// let data=[2,4,6,8,12,42,56,80]
+// // document.write(data)
+// let position =3;
+// for(let i=position;i<data.length-1;i++){
+//     data[i]=data[i+1]
+//     // document.write(`${data[i]} <br/>`)
+// } 
+// data.length=data.length-1
+// console.warn(data)
+function handleRemove(){
+    let data=[2,4,6,8,12,42,56,80]
+let position = document.getElementById('inputval').value;
+position=parseInt(position)
+for(let i=position;i<data.length-1;i++){
+    data[i]=data[i+1]
+} 
+data.length=data.length-1
+console.warn(data)
+}
+    </script>
+</head>
+<body>
+  <input type="text" placeholder="Inter Index To Remove" id="inputval"/>
+  <button onclick="handleRemove()">Remove Items</button>
+</body>
+</html>
